@@ -2,31 +2,35 @@ import React from 'react';
 import {
   MainContainer,
   Button,
-  MainContainer_Titulos,
+  Main_Titulos,
   MainContainer_box,
+  Main_Logo,
 } from './MainStyle';
+import Logo from 'assets/logo.svg';
+
 const Main = () => {
   return (
     <>
       <MainContainer>
-        <p>IMAGEM DE FUNDO</p>
+        <header>
+          <Main_Logo src={Logo} />
+        </header>
         <MainContainer_box>
-          <MainContainer_Titulos>
+          <Main_Titulos>
             <h1 className="titulo">HELPER</h1>
-            <h2 className="subtitulo">
-              Ajude como pode <br /> com que pode
-            </h2>
-          </MainContainer_Titulos>
-          <div>
-            <Button
-              type="submit"
-              onClick={() => {
-                console.log('click');
-              }}
-            >
-              Contribuir
-            </Button>
-          </div>
+            <h2 className="subtitulo">Ajude como pode</h2>
+            <h2 className="subtitulo">com que pode</h2>
+          </Main_Titulos>
+        </MainContainer_box>
+        <MainContainer_box>
+          <Button
+            type="submit"
+            onClick={() => {
+              console.log('click');
+            }}
+          >
+            Contribuir
+          </Button>
         </MainContainer_box>
       </MainContainer>
     </>
