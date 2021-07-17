@@ -5,6 +5,7 @@ import {
   Main_Titulos,
   MainContainer_box,
   Main_Logo,
+  ArrowDown,
 } from './MainStyle';
 import Logo from 'assets/logo.svg';
 
@@ -24,14 +25,15 @@ const Main = () => {
         </MainContainer_box>
         <MainContainer_box>
           <Button
+            as="button"
             type="submit"
-            onClick={() => {
-              console.log('click');
-            }}
+            onClick={() => alert('click')}
+            href="#"
           >
             Contribuir
           </Button>
         </MainContainer_box>
+        <ArrowDown title={'Arrow down'} />
       </MainContainer>
     </>
   );
